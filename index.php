@@ -18,7 +18,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-sm-6">
-								<h3 class="mb-0">Aplikasi SICMAS</h3>
+								<h3 class="mb-0">PAPER NEST</h3>
 							</div>
 							<div class="col-sm-6">
 								<ol class="breadcrumb float-sm-end">
@@ -50,11 +50,11 @@
 									</div>
 
 									<div class="card-body">
-										<p>Halo user! SICMAS merupakan singkatan dari Sistem Informasi CRUD Mahasiswa, aplikasi ini bertujuan untuk mengajarkan bagaimana merancang sebuah dashboard pengelolaan dengan konsep CRUD menggunakan bahasa pemrograman PHP. Penulisan kode menggunakan OOP (Object Oriented Programming). Silakan gunakan secara bijak dan modifikasi sesuai keperluan!</p>
-										<p>Silakan pilih salah satu tombol untuk memulai!</p>
-										<a href="data-input.php" class="btn btn-primary btn-lg"><i class="bi bi-clipboard-data-fill"></i> Input Data Mahasiswa</a>
-										<a href="data-list.php" class="btn btn-success btn-lg"><i class="bi bi-card-list"></i> Lihat Daftar Mahasiswa</a>
-										<a href="data-search.php" class="btn btn-warning btn-lg"><i class="bi bi-search-heart-fill"></i> Cari Mahasiswa</a>
+										<p>"Sistem Percetakan Paper Nest dirancang untuk efisiensi maksimal dalam produksi materi promosi dan publikasi. Sistem ini mengintegrasikan teknologi Digital Printing untuk pesanan on-demand dan Offset Konvensional untuk volume tinggi, didukung oleh workflow yang meminimalkan human error. Kami menjamin presisi warna dengan kalibrasi rutin dan menyediakan beragam opsi finishing premium seperti spot UV dan laminasi, memastikan setiap hasil cetak mencerminkan kualitas profesional merek Anda."</p>
+										<p>Silakan Bergabung</p>
+										<a href="data-input.php" class="btn btn-primary btn-lg"><i class="bi bi-clipboard-data-fill"></i> Input Transaksi</a>
+										<a href="data-list.php" class="btn btn-success btn-lg"><i class="bi bi-card-list"></i> Lihat Daftar Transaksi</a>
+										<a href="data-search.php" class="btn btn-warning btn-lg"><i class="bi bi-search-heart-fill"></i> Cari Transaksi</a>
 									</div>
 
 								</div>

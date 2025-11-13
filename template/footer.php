@@ -1,7 +1,7 @@
 <footer class="app-footer">
 
     <strong>
-        Copyright &copy; 2025 Aria Developer Untuk Keperluan Edukasi.
+        Copyright &copy; Gemini20 Project 2025 
     </strong>
 
 </footer>

@@ -1,13 +1,13 @@
 <?php
 
 // Memasukkan file class-mahasiswa.php untuk mengakses class Mahasiswa
-include_once '../config/class-mahasiswa.php';
+include_once '../config/class-transaksi.php';
 // Membuat objek dari class Mahasiswa
-$mahasiswa = new Mahasiswa();
+$transaksi = new Transaksi();
 // Mengambil id mahasiswa dari parameter GET
-$id = $_GET['id'];
+$kode = $_GET['kode'];
 // Memanggil method deleteMahasiswa untuk menghapus data mahasiswa berdasarkan id
-$delete = $mahasiswa->deleteMahasiswa($id);
+$delete = $transaksi->deleteTransaksi($kode);
 // Mengecek apakah proses delete berhasil atau tidak - true/false
 if($delete){
     // Jika berhasil, redirect ke halaman data-list.php dengan status deletesuccess
