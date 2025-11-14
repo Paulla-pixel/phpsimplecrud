@@ -1,3 +1,4 @@
+
 <?php
 
 // Silakan lihat komentar di file data-list.php untuk penjelasan kode ini, karena struktur dan logikanya serupa.
@@ -5,16 +6,16 @@ include_once 'config/class-master.php';
 $master = new MasterData();
 if(isset($_GET['status'])){
 	if($_GET['status'] == 'inputsuccess'){
-		echo "<script>alert('Data produk berhasil ditambahkan.');</script>";
+		echo "<script>alert('Data prodi berhasil ditambahkan.');</script>";
 	} else if($_GET['status'] == 'editsuccess'){
-		echo "<script>alert('Data produk berhasil diubah.');</script>";
+		echo "<script>alert('Data prodi berhasil diubah.');</script>";
 	} else if($_GET['status'] == 'deletesuccess'){
-		echo "<script>alert('Data produk berhasil dihapus.');</script>";
+		echo "<script>alert('Data prodi berhasil dihapus.');</script>";
 	} else if($_GET['status'] == 'deletefailed'){
-		echo "<script>alert('Gagal menghapus data produk. Silakan coba lagi.');</script>";
+		echo "<script>alert('Gagal menghapus data prodi. Silakan coba lagi.');</script>";
 	}
-
-$dataProduk = $master->getProduk();
+}
+$dataProdi = $master->getProdi();
 
 ?>
 <!doctype html>
@@ -37,12 +38,12 @@ $dataProduk = $master->getProduk();
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-sm-6">
-								<h3 class="mb-0">Data Produk
+								<h3 class="mb-0">Data Program Studi</h3>
 							</div>
 							<div class="col-sm-6">
 								<ol class="breadcrumb float-sm-end">
 									<li class="breadcrumb-item"><a href="index.php">Beranda</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Master Produk</li>
+									<li class="breadcrumb-item active" aria-current="page">Master Prodi</li>
 								</ol>
 							</div>
 						</div>
@@ -78,19 +79,19 @@ $dataProduk = $master->getProduk();
 											</thead>
 											<tbody>
 												<?php
-													if(count($dataProduk) == 0){
+													if(count($dataProdi) == 0){
 													    echo '<tr class="align-middle">
-															<td colspan="4" class="text-center">Tidak ada data produk.</td>
+															<td colspan="4" class="text-center">Tidak ada data prodi.</td>
 														</tr>';
 													} else {
-														foreach ($dataProduk as $index => $produk){
+														foreach ($dataProdi as $index => $prodi){
 															echo '<tr class="align-middle">
 																<td>'.($index + 1).'</td>
-																<td>'.$produk['id'].'</td>
-																<td>'.$produk['nama'].'</td>
+																<td>'.$prodi['id'].'</td>
+																<td>'.$prodi['nama'].'</td>
 																<td class="text-center">
-																	<button type="button" class="btn btn-sm btn-warning me-1" onclick="window.location.href=\'master-produk-edit.php?id='.$produk['id'].'\'"><i class="bi bi-pencil-fill"></i> Edit</button>
-																	<button type="button" class="btn btn-sm btn-danger" onclick="if(confirm(\'Yakin ingin menghapus data produk ini?\')){window.location.href=\'proses/proses-produk.php?aksi=deleteproduk&id='.$produk['id'].'\'}"><i class="bi bi-trash-fill"></i> Hapus</button>
+																	<button type="button" class="btn btn-sm btn-warning me-1" onclick="window.location.href=\'master-prodi-edit.php?id='.$prodi['id'].'\'"><i class="bi bi-pencil-fill"></i> Edit</button>
+																	<button type="button" class="btn btn-sm btn-danger" onclick="if(confirm(\'Yakin ingin menghapus data program studi ini?\')){window.location.href=\'proses/proses-prodi.php?aksi=deleteprodi&id='.$prodi['id'].'\'}"><i class="bi bi-trash-fill"></i> Hapus</button>
 																</td>
 															</tr>';
 														}
@@ -100,9 +101,8 @@ $dataProduk = $master->getProduk();
 										</table>
 									</div>
 									<div class="card-footer">
-   										 <button type="button" class="btn btn-primary" onclick="window.location.href='master-produk-input.php'"><i class="bi bi-plus-lg"></i> Tambah Produk</button>
-								</div>
-
+										<button type="button" class="btn btn-primary" onclick="window.location.href='master-prodi-input.php'"><i class="bi bi-plus-lg"></i> Tambah Prodi</button>
+									</div>
 								</div>
 							</div>
 						</div>
